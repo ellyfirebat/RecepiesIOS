@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cooking_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg" translatesAutoresizingMaskIntoConstraints="NO" id="eQ1-NH-aK7">
+                                <rect key="frame" x="0.0" y="59" width="414" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eQ1-NH-aK7" secondAttribute="height" multiplier="16:8" id="w7F-wv-vDh"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="p1S-35-acV">
+                                <rect key="frame" x="8" y="322" width="398" height="311"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT2-pW-ptv">
+                                        <rect key="frame" x="20" y="0.0" width="358" height="53"/>
+                                        <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DT2-pW-ptv" secondAttribute="height" multiplier="358:53" id="sVd-yS-GsU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                        <inset key="contentEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Receipe book" backgroundImage="button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ReceipeBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2a-j3-k11"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-Yt-2LB">
+                                        <rect key="frame" x="20" y="86" width="358" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EGt-Yt-2LB" secondAttribute="height" multiplier="358:53" id="EOT-IL-7r1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Add new receipe" backgroundImage="button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qsH-3o-k8F" kind="presentation" id="8pa-CZ-tbF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-b1-edc">
+                                        <rect key="frame" x="20" y="172" width="358" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2Mo-b1-edc" secondAttribute="height" multiplier="358:53" id="CLs-VV-S2Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                        <inset key="contentEdgeInsets" minX="21" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Print/Share receipe" backgroundImage="button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="PrintReceipe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRs-RG-2GY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgJ-om-geh">
+                                        <rect key="frame" x="20" y="258" width="358" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tgJ-om-geh" secondAttribute="height" multiplier="358:53" id="aiw-RS-jlI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                        <inset key="contentEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Create shopping list" backgroundImage="button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ShoppingList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvo-Vh-Tqg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tgJ-om-geh" secondAttribute="bottom" id="HNh-jL-1DP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.82137075655764136" blue="0.45162137458507245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eQ1-NH-aK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="4Mh-mA-gKp"/>
+                            <constraint firstItem="p1S-35-acV" firstAttribute="top" secondItem="eQ1-NH-aK7" secondAttribute="bottom" constant="56" id="A42-QK-OOk"/>
+                            <constraint firstItem="eQ1-NH-aK7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NBr-eg-nTe"/>
+                            <constraint firstItem="eQ1-NH-aK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ort-41-8eR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1S-35-acV" secondAttribute="trailing" constant="8" id="lJ0-2T-QRt"/>
+                            <constraint firstItem="p1S-35-acV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="nh4-Gg-Epq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="Edl-TP-Jr7" kind="show" identifier="receipe_book" id="ghh-ut-vST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="-259"/>
+        </scene>
+        <!--Receipe View Controller-->
+        <scene sceneID="RaZ-z2-PGC">
+            <objects>
+                <viewController id="Edl-TP-Jr7" customClass="ReceipeViewController" customModule="Cooking_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="BBM-Mm-P1h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="X3L-AN-r2u">
+                                <rect key="frame" x="15" y="110.66666666666669" width="384" height="621"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="03C-Nm-DS5">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="198.66666666666666"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="lzR-9x-Mgd">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="169.33333333333334"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dessert" translatesAutoresizingMaskIntoConstraints="NO" id="R77-vA-zvX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="169.33333333333334"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="R77-vA-zvX" secondAttribute="height" multiplier="1:1" id="kby-s1-PGp"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="VCm-SJ-tyn">
+                                                        <rect key="frame" x="214.66666666666663" y="0.0" width="169.33333333333337" height="169.33333333333334"/>
+                                                        <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="VCm-SJ-tyn" secondAttribute="height" multiplier="1:1" id="Ovp-J4-ZdF"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="R77-vA-zvX" firstAttribute="leading" secondItem="lzR-9x-Mgd" secondAttribute="leading" id="k3H-rA-1dK"/>
+                                                    <constraint firstItem="VCm-SJ-tyn" firstAttribute="leading" secondItem="R77-vA-zvX" secondAttribute="trailing" constant="45" id="lHU-Bf-elp"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="uN3-LQ-YOq">
+                                                <rect key="frame" x="0.0" y="169.33333333333331" width="384" height="29.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desserts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-1I-G2Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-rN-eHr">
+                                                        <rect key="frame" x="214.66666666666663" y="0.0" width="169.33333333333337" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-gg-SF2">
+                                        <rect key="frame" x="0.0" y="210.66666666666663" width="384" height="199.33333333333337"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="f28-2E-1lF">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="170"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bakes" translatesAutoresizingMaskIntoConstraints="NO" id="OPp-eh-jFs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="OPp-eh-jFs" secondAttribute="height" multiplier="1:1" id="93u-qv-qvt"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soup" translatesAutoresizingMaskIntoConstraints="NO" id="M8H-Mf-U5C">
+                                                        <rect key="frame" x="214" y="0.0" width="170" height="170"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="M8H-Mf-U5C" secondAttribute="height" multiplier="1:1" id="OBt-pX-ZWY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="bDh-uX-RBb">
+                                                <rect key="frame" x="0.0" y="170" width="384" height="29.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="car-n0-0Nj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1op-gr-DnU">
+                                                        <rect key="frame" x="214" y="0.0" width="170" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-fj-psZ">
+                                        <rect key="frame" x="0.0" y="422" width="384" height="199"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="x2P-PY-mYG">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="169.66666666666666"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="Sq1-ft-3ES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="169.66666666666666"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Sq1-ft-3ES" secondAttribute="height" multiplier="1:1" id="fvw-5R-ZiV"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_dishes" translatesAutoresizingMaskIntoConstraints="NO" id="GZq-5y-nh3">
+                                                        <rect key="frame" x="214.66666666666663" y="0.0" width="169.33333333333337" height="169.66666666666666"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="GZq-5y-nh3" secondAttribute="height" multiplier="1:1" id="aTl-LH-HH1"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-Z8-I0Y">
+                                                <rect key="frame" x="0.0" y="169.66666666666674" width="384" height="29.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOB-2P-3Rd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.18032196164131165" green="0.22242659330368042" blue="0.25933259725570679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="23"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main dishes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM8-cO-IiN">
+                                                        <rect key="frame" x="214.66666666666663" y="0.0" width="169.33333333333337" height="29.333333333333332"/>
+                                                        <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTG-gi-No5">
+                                <rect key="frame" x="230" y="33" width="81" height="40"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iWA-1e-Rd9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackPressed:" destination="Edl-TP-Jr7" eventType="touchUpInside" id="LPQ-N3-uYe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.82137075660000003" blue="0.45162137460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="X3L-AN-r2u" firstAttribute="leading" secondItem="mr5-Em-tFW" secondAttribute="leading" constant="15" id="TKe-1P-TW8"/>
+                            <constraint firstItem="X3L-AN-r2u" firstAttribute="centerY" secondItem="BBM-Mm-P1h" secondAttribute="centerY" id="YzR-mL-LYL"/>
+                            <constraint firstItem="NTG-gi-No5" firstAttribute="top" secondItem="mr5-Em-tFW" secondAttribute="top" constant="33" id="aYp-jM-8M2"/>
+                            <constraint firstItem="X3L-AN-r2u" firstAttribute="top" secondItem="NTG-gi-No5" secondAttribute="bottom" constant="37.5" id="gC4-Lt-JrS"/>
+                            <constraint firstItem="mr5-Em-tFW" firstAttribute="trailing" secondItem="X3L-AN-r2u" secondAttribute="trailing" constant="15" id="vxt-o1-LnR"/>
+                            <constraint firstItem="X3L-AN-r2u" firstAttribute="centerX" secondItem="BBM-Mm-P1h" secondAttribute="centerX" id="yql-Lo-xyJ"/>
+                            <constraint firstItem="NTG-gi-No5" firstAttribute="leading" secondItem="mr5-Em-tFW" secondAttribute="leading" constant="230" id="zBQ-cz-6RR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mr5-Em-tFW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wAv-7J-B1W"/>
+                    <connections>
+                        <outlet property="bakingView" destination="OPp-eh-jFs" id="dtv-Td-5su"/>
+                        <outlet property="dessertView" destination="R77-vA-zvX" id="cKM-YL-FvA"/>
+                        <outlet property="maindishesView" destination="GZq-5y-nh3" id="0fs-Gb-2Q0"/>
+                        <outlet property="meatView" destination="VCm-SJ-tyn" id="GcG-Qq-2fP"/>
+                        <outlet property="saladView" destination="Sq1-ft-3ES" id="oNL-fI-7En"/>
+                        <outlet property="soupView" destination="M8H-Mf-U5C" id="YIP-f6-yBr"/>
+                        <segue destination="c8e-2q-uvI" kind="show" identifier="recepieList" id="HhT-E2-Fuv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfr-Mk-vtP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="-259"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="k3j-1W-EEo">
+            <objects>
+                <viewController id="c8e-2q-uvI" customClass="ListViewController" customModule="Cooking_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTU-X3-boD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-Ud-vuF">
+                                <rect key="frame" x="20" y="80" width="374" height="728"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recepieCell" rowHeight="156" id="oHC-JB-bA5" customClass="RecepieCell" customModule="Cooking_book" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oHC-JB-bA5" id="LLc-LB-5XU">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WtJ-U5-DI4">
+                                                    <rect key="frame" x="10" y="14" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="WtJ-U5-DI4" secondAttribute="height" multiplier="1:1" id="DhW-tK-uKg"/>
+                                                        <constraint firstAttribute="height" constant="128" id="lug-OC-P9D"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYB-6v-pmZ">
+                                                    <rect key="frame" x="152" y="68" width="213" height="74"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S2L-K9-0zf">
+                                                    <rect key="frame" x="146" y="14" width="219" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                                    <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.50866324769938653" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="GYB-6v-pmZ" secondAttribute="trailing" constant="9" id="K7T-lr-Ca1"/>
+                                                <constraint firstAttribute="bottom" secondItem="GYB-6v-pmZ" secondAttribute="bottom" constant="14" id="Xer-6r-zQn"/>
+                                                <constraint firstItem="WtJ-U5-DI4" firstAttribute="top" secondItem="LLc-LB-5XU" secondAttribute="top" constant="14" id="cT8-YP-TY8"/>
+                                                <constraint firstAttribute="bottom" secondItem="WtJ-U5-DI4" secondAttribute="bottom" constant="14" id="sz5-aw-11Q"/>
+                                                <constraint firstItem="WtJ-U5-DI4" firstAttribute="leading" secondItem="LLc-LB-5XU" secondAttribute="leading" constant="10" id="tDj-Ch-FOc"/>
+                                                <constraint firstItem="GYB-6v-pmZ" firstAttribute="leading" secondItem="WtJ-U5-DI4" secondAttribute="trailing" constant="14" id="wBc-jZ-u1p"/>
+                                                <constraint firstItem="GYB-6v-pmZ" firstAttribute="top" secondItem="LLc-LB-5XU" secondAttribute="top" constant="68" id="zcm-om-os9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55626917177914115" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="ivMain" destination="WtJ-U5-DI4" id="Q26-DU-L9E"/>
+                                            <outlet property="lblDescription" destination="GYB-6v-pmZ" id="hqe-Ih-7We"/>
+                                            <outlet property="lblTitle" destination="S2L-K9-0zf" id="Uee-Vw-iVj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-qo-QqE">
+                                <rect key="frame" x="247" y="20" width="81" height="40"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="W6B-cz-ufy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackPressed:" destination="c8e-2q-uvI" eventType="touchUpInside" id="7Ha-h0-o0D"/>
+                                    <action selector="onBackPressed:" destination="Edl-TP-Jr7" eventType="touchUpInside" id="abm-jX-9qT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.82137075660000003" blue="0.45162137460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tfD-qo-QqE" firstAttribute="leading" secondItem="9nA-Yc-oo1" secondAttribute="leading" constant="247" id="0b7-kK-83c"/>
+                            <constraint firstItem="9nA-Yc-oo1" firstAttribute="trailing" secondItem="tfD-qo-QqE" secondAttribute="trailing" constant="86" id="8eI-zJ-3zs"/>
+                            <constraint firstItem="tfD-qo-QqE" firstAttribute="top" secondItem="9nA-Yc-oo1" secondAttribute="top" constant="20" id="9gc-9j-xdW"/>
+                            <constraint firstItem="LVv-Ud-vuF" firstAttribute="top" secondItem="9nA-Yc-oo1" secondAttribute="top" constant="80" id="Rg0-Wg-22Y"/>
+                            <constraint firstItem="LVv-Ud-vuF" firstAttribute="leading" secondItem="9nA-Yc-oo1" secondAttribute="leading" constant="20" id="TUN-BL-d12"/>
+                            <constraint firstItem="9nA-Yc-oo1" firstAttribute="trailing" secondItem="LVv-Ud-vuF" secondAttribute="trailing" constant="20" id="dJT-85-hkB"/>
+                            <constraint firstItem="9nA-Yc-oo1" firstAttribute="bottom" secondItem="LVv-Ud-vuF" secondAttribute="bottom" id="taZ-kc-35s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9nA-Yc-oo1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ExS-5h-NZV"/>
+                    <connections>
+                        <outlet property="tvRecepies" destination="LVv-Ud-vuF" id="Dsx-fo-Yl0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6z2-zv-73H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537.68115942029" y="-259.15178571428572"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="2Sb-CX-By2">
+            <objects>
+                <viewController id="NPK-vT-nev" customClass="DetailViewController" customModule="Cooking_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rhz-bP-ndh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="azI-ex-aIO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vb7-bt-6R6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="-252"/>
+        </scene>
+        <!--Adding New Receipe View Controller-->
+        <scene sceneID="lmx-hV-9Cg">
+            <objects>
+                <viewController id="qsH-3o-k8F" customClass="AddingNewReceipeViewController" customModule="Cooking_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dSf-io-I8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeY-Cb-CqD">
+                                <rect key="frame" x="36" y="69" width="319" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-mh-zvn">
+                                <rect key="frame" x="228" y="666" width="127" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close" destination="qsH-3o-k8F" eventType="touchUpInside" id="lYg-bf-yIV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-Hb-3gW">
+                                <rect key="frame" x="36" y="157" width="319" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dishes name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-O7-3tf">
+                                <rect key="frame" x="36" y="37" width="144" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingridients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-JC-MzL">
+                                <rect key="frame" x="36" y="125" width="144" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B50-sv-utr">
+                                <rect key="frame" x="36" y="339" width="70" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-Kt-5c0">
+                                <rect key="frame" x="36" y="371" width="319" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload youre photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBT-wO-4ak">
+                                <rect key="frame" x="36" y="564" width="225" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbI-hl-KZX">
+                                <rect key="frame" x="36" y="666" width="124" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1803219616" green="0.2224265933" blue="0.25933259730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.49803921569999998" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSaveClicked:" destination="qsH-3o-k8F" eventType="touchUpInside" id="Oxo-Ho-gb5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.82137075660000003" blue="0.45162137460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UkV-KX-PKI"/>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldName" destination="VeY-Cb-CqD" id="DZ3-JH-bxV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awf-DV-tAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="427.90178571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bakes" width="75" height="75"/>
+        <image name="button" width="358" height="53"/>
+        <image name="dessert" width="75" height="75"/>
+        <image name="egg" width="338" height="186.5"/>
+        <image name="main_dishes" width="75" height="75"/>
+        <image name="meat" width="75" height="75"/>
+        <image name="salad" width="75" height="75"/>
+        <image name="soup" width="75" height="75"/>
+    </resources>
+</document>
